@@ -1,14 +1,32 @@
-
-# CoLLaM - 法律大模型评估框架
-
-大型语言模型的广泛应用正在逐渐改变着法律从业者的工作模式。它们能够为法律专业人员在撰写文书、案例分析等方面提供高效的支持。然而，由于数据依赖的训练方式和其黑盒特性，大型语言模型难以保证其输出的正确性和可靠性。这使得将其应用在司法领域存在一定的系统性风险。为了准确评估大模型的司法能力，确保大型语言模型在司法领域的应用安全可靠，我们构建了一个全面的司法大模型评估框架CoLLaM。 该框架从大模型的语言能力和司法领域的实际需求出发，对各项法律任务及其内在能力关联进行了系统分析和整理, 实现了对大型语言模型司法能力的初步评估。该项目旨在更好地评估大型语言模型在司法领域的专业能力，并进一步推动进司法大模型的发展。
-
-CoLLaM设计总结了涉及记忆、理解、逻辑推理、辨别、生成、伦理共6种大语言模型能力的25个法律任务，并通过利用部分已有数据集和构建全新数据集，实现对大语言模型司法能力的初步评价。
-
-请注意，目前的数据集可能仍处于初步阶段，我们欢迎社区的帮助和建议，以帮助我们不断完善和扩展数据集，从而提高评估框架的可用性和准确性。
+# CoLLaM: A Comprehensive Benchmark for Evaluating Large Language Models in Legal Domain
 
 
+## Overview
 
-## 许可证
+Large language models (LLMs) have made significant progress in natural language processing tasks and have shown considerable potential in the legal domain.  However, the legal applications often have high requirements on accuracy, reliability and fairness. Applying existing LLMs to legal systems without careful evaluation of their potentials and limitations could lead to significant risks in legal practice.
+Therefore, to facilitate the healthy development and application of LLMs in the legal domain, we propose a comprehensive benchmark CoLLaM for evaluating LLMs in legal domain. 
 
-本项目采用 MIT 许可证。查阅 [LICENSE](LICENSE) 文件以获取更多详细信息。
+## Legal Cognitive Ability Taxonomy
+
+Inspired by Bloom's taxonomy and real-world legal application scenarios, we propose a legal cognitive ability taxonomy (LCAT) to provide guidance for the evaluation of LLMs. Our taxonomy categorizes the application of LLMs in the legal domain into six ability levels: Memorization, Understanding, Logic Inference, Discrimination, Generation, and Ethic. 
+![image](./figure/taxonomy.png)
+
+
+## Tasks Definition
+
+The dataset for CoLLaM consists of 13,650 questions carefully designed to cover the breadth of legal cognitive abilities outlined in the LCAT. The questions span 23 tasks relevant to legal scenarios, providing a diverse set for evaluating LLM performance.
+
+![image](./figure/overview.png)
+
+The data directory contains all the evaluation questions. 
+The example directory contains the in-context examples in the few-shot setting.
+
+![image](./figure/tasks.png)
+
+## Contributing
+
+We welcome contributions and feedback from the community to enhance CoLLaM. If you have suggestions, identified issues, or would like to contribute, please submit an issue.
+
+## License
+
+CoLLaM is released under the [MIT License](LICENSE).
