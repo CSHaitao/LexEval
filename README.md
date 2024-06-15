@@ -21,7 +21,11 @@ The dataset for CoLLaM consists of 13,650 questions carefully designed to cover 
 The data directory contains all the evaluation questions. 
 The example directory contains the in-context examples in the few-shot setting.
 
+The following table shows the details of the tasks in CoLLaM:
 ![image](./figure/tasks.png)
+
+Further experimental details and analyses can be found in our paper.
+
 
 ## Contributing
 
