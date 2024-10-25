@@ -18,7 +18,7 @@ class Chatgpt_generator(model_generator):
                 
     def generate_output(self, q_type, tokenizer=None, model=None):
         '''
-        Generate the output for chatglm, using the suitable prompt template
+        Generate the output for chatgpt, using the suitable prompt template
         '''
         task_name = self.f_path.split("/")[-1].split(".")[0]
         instruction_ls, input_text_ls, answer_ls = self.process_prompt(task_name)

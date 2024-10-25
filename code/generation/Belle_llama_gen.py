@@ -43,21 +43,21 @@ class Belle_llama_generator(model_generator):
                     prompt.append(current_prompt)
                 # Truncate the prompt
                 prompt = [model_generator.truncate_long(prompt[i], 2048, tokenizer, q_type) for i in range(len(prompt))]
-                # try:
-                response_ls = model.generate(prompt, sampling_params)
-                for i, out in enumerate(response_ls):
-                    response = out.outputs[0].text
-                    output_ls.append({"input": input_text[i],
-                                "output": response,
-                                "answer": answer[i]})
-                # except:
-                #     for i in range(len(instruction)):
-                #         num_unsuccess += 1
-                #         print("Fail to answer")
-                #         response = "未成功回答"
-                #         output_ls.append({"input": input_text,
-                #                   "output": response,
-                #                   "answer": answer})
+                try:
+                    response_ls = model.generate(prompt, sampling_params)
+                    for i, out in enumerate(response_ls):
+                        response = out.outputs[0].text
+                        output_ls.append({"input": input_text[i],
+                                    "output": response,
+                                    "answer": answer[i]})
+                except:
+                    for i in range(len(instruction)):
+                        num_unsuccess += 1
+                        print("Fail to answer")
+                        response = "未成功回答"
+                        output_ls.append({"input": input_text,
+                                  "output": response,
+                                  "answer": answer})
         else:
             for instruction, input_text, answer in tqdm(zip(instruction_ls, input_text_ls, answer_ls), total=len(input_text_ls)):
                 prompt = instruction + input_text

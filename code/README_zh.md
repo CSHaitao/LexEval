@@ -14,7 +14,7 @@
         --f_path $DATA_DIR/1_1.json \
         --model_path $MODEL_PATH \
         --model_name $MODEL_NAME \
-        --output_dir ../zero_shot_output/$MODEL_NAME \
+        --output_dir ../../model_output/zero_shot/$MODEL_NAME \
         --log_name running.log \
         --device "0"
     # Few-shot
@@ -23,7 +23,7 @@
         --few_shot_path $EXAMPLE_DIR/1_1_few_shot.json \
         --model_path $MODEL_PATH \
         --model_name $MODEL_NAME \
-        --output_dir ../few_shot_output/$MODEL_NAME \
+        --output_dir ../../model_output/few_shot/$MODEL_NAME \
         --log_name running.log \
         --device "0" \
         --is_few_shot
@@ -32,7 +32,7 @@
         --f_path $DATA_DIR/1_1.json \
         --model_path $MODEL_PATH \
         --model_name $MODEL_NAME \
-        --output_dir ../zero_shot_output/$MODEL_NAME \
+        --output_dir ../../model_output/zero_shot/$MODEL_NAME \
         --log_name running.log \
         --device "0" \
         --batch_size 50 \
@@ -60,8 +60,8 @@
     ```bash
     cd evaluation
     python evaluate.py \
-        --input_dir ../zero_shot_output \
-        --output_dir ../evaluation_output \
+        --input_dir ../../model_output/zero_shot \
+        --output_dir ../../evaluation_output \
         --metrics_choice "Accuracy" \
         --metrics_gen "Rouge_L" \
     ```
