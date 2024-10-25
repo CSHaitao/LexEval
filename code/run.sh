@@ -18,7 +18,7 @@ do
             --model_path ${MODELPATH_NAME_LS[$i]} \
             --model_name ${MODEL_NAME_LS[$i]} \
             --device $DEVICE \
-            --output_dir ../model_output/zero_shot/${MODEL_NAME_LS[$i]} \
+            --output_dir ../../model_output/zero_shot/${MODEL_NAME_LS[$i]} \
             --log_name "running.log"
     done
     for j in 1 2 3 4 5
@@ -28,7 +28,7 @@ do
             --model_path ${MODELPATH_NAME_LS[$i]} \
             --model_name ${MODEL_NAME_LS[$i]} \
             --device $DEVICE \
-            --output_dir ../model_output/zero_shot/${MODEL_NAME_LS[$i]} \
+            --output_dir ../../model_output/zero_shot/${MODEL_NAME_LS[$i]} \
             --log_name "running.log"
     done
     for j in 1 2 3 4 5 6
@@ -38,7 +38,7 @@ do
             --model_path ${MODELPATH_NAME_LS[$i]} \
             --model_name ${MODEL_NAME_LS[$i]} \
             --device $DEVICE \
-            --output_dir ../model_output/zero_shot/${MODEL_NAME_LS[$i]} \
+            --output_dir ../../model_output/zero_shot/${MODEL_NAME_LS[$i]} \
             --log_name "running.log"
     done
     for j in 1 2
@@ -48,7 +48,7 @@ do
             --model_path ${MODELPATH_NAME_LS[$i]} \
             --model_name ${MODEL_NAME_LS[$i]} \
             --device $DEVICE \
-            --output_dir ../model_output/zero_shot/${MODEL_NAME_LS[$i]} \
+            --output_dir ../../model_output/zero_shot/${MODEL_NAME_LS[$i]} \
             --log_name "running.log"
     done
     for j in 1 2 3 4
@@ -58,7 +58,7 @@ do
             --model_path ${MODELPATH_NAME_LS[$i]} \
             --model_name ${MODEL_NAME_LS[$i]} \
             --device $DEVICE \
-            --output_dir ../model_output/zero_shot/${MODEL_NAME_LS[$i]} \
+            --output_dir ../../model_output/zero_shot/${MODEL_NAME_LS[$i]} \
             --log_name "running.log"
     done
     for j in 1 2 3
@@ -68,7 +68,7 @@ do
             --model_path ${MODELPATH_NAME_LS[$i]} \
             --model_name ${MODEL_NAME_LS[$i]} \
             --device $DEVICE \
-            --output_dir ../model_output/zero_shot/${MODEL_NAME_LS[$i]} \
+            --output_dir ../../model_output/zero_shot/${MODEL_NAME_LS[$i]} \
             --log_name "running.log"
     done
 done
@@ -84,7 +84,7 @@ do
             --model_path ${MODELPATH_NAME_LS[$i]} \
             --model_name ${MODEL_NAME_LS[$i]} \
             --device $DEVICE \
-            --output_dir ../model_output/few_shot/${MODEL_NAME_LS[$i]} \
+            --output_dir ../../model_output/few_shot/${MODEL_NAME_LS[$i]} \
             --log_name "running.log" \
             --is_few_shot
     done
@@ -96,7 +96,7 @@ do
             --model_path ${MODELPATH_NAME_LS[$i]} \
             --model_name ${MODEL_NAME_LS[$i]} \
             --device $DEVICE \
-            --output_dir ../model_output/few_shot/${MODEL_NAME_LS[$i]} \
+            --output_dir ../../model_output/few_shot/${MODEL_NAME_LS[$i]} \
             --log_name "running.log" \
             --is_few_shot
     done
@@ -108,7 +108,7 @@ do
             --model_path ${MODELPATH_NAME_LS[$i]} \
             --model_name ${MODEL_NAME_LS[$i]} \
             --device $DEVICE \
-            --output_dir ../model_output/few_shot/${MODEL_NAME_LS[$i]} \
+            --output_dir ../../model_output/few_shot/${MODEL_NAME_LS[$i]} \
             --log_name "running.log" \
             --is_few_shot
     done
@@ -120,7 +120,7 @@ do
             --model_path ${MODELPATH_NAME_LS[$i]} \
             --model_name ${MODEL_NAME_LS[$i]} \
             --device $DEVICE \
-            --output_dir ../model_output/few_shot/${MODEL_NAME_LS[$i]} \
+            --output_dir ../../model_output/few_shot/${MODEL_NAME_LS[$i]} \
             --log_name "running.log" \
             --is_few_shot
     done
@@ -132,7 +132,7 @@ do
             --model_path ${MODELPATH_NAME_LS[$i]} \
             --model_name ${MODEL_NAME_LS[$i]} \
             --device $DEVICE \
-            --output_dir ../model_output/few_shot/${MODEL_NAME_LS[$i]} \
+            --output_dir ../../model_output/few_shot/${MODEL_NAME_LS[$i]} \
             --log_name "running.log" \
             --is_few_shot
     done
@@ -144,7 +144,7 @@ do
             --model_path ${MODELPATH_NAME_LS[$i]} \
             --model_name ${MODEL_NAME_LS[$i]} \
             --device $DEVICE \
-            --output_dir ../model_output/few_shot/${MODEL_NAME_LS[$i]} \
+            --output_dir ../../model_output/few_shot/${MODEL_NAME_LS[$i]} \
             --log_name "running.log" \
             --is_few_shot
     done
