@@ -73,7 +73,7 @@ LexEval的数据集包含14,150个问题，这些问题经过精心设计，涵�
 下表展示了LexEval任务的详细信息：
 ![image](./figure/tasks.png)
 
-更多实验细节和分析请参见我们的论文。
+为了帮助研究人员快速了解每个任务的评估数据，我们在 Huggingface Dataset 提供了数据集：[LexEval](https://huggingface.co/datasets/CSHaitao/LexEval). 更多实验细节和分析请参见我们的论文。
 
 
 ## 🚀 快速开始 
@@ -91,7 +91,7 @@ LexEval的数据集包含14,150个问题，这些问题经过精心设计，涵�
     MODEL_NAME='xxx'
     DATA_DIR='xxx'
     EXAMPLE_DIR='xxx'
-    # 零样例
+    # zero-shot
     python main.py \
         --f_path $DATA_DIR/1_1.json \
         --model_path $MODEL_PATH \
@@ -99,7 +99,7 @@ LexEval的数据集包含14,150个问题，这些问题经过精心设计，涵�
         --output_dir ../../model_output/zero_shot/$MODEL_NAME \
         --log_name running.log \
         --device "0"
-    # 少样例
+    # few-shot
     python main.py \
         --f_path $DATA_DIR/1_1.json \
         --few_shot_path $EXAMPLE_DIR/1_1_few_shot.json \
@@ -109,7 +109,7 @@ LexEval的数据集包含14,150个问题，这些问题经过精心设计，涵�
         --log_name running.log \
         --device "0" \
         --is_few_shot
-    # 对于某些模型，使用vllm加速推理
+    # For some models, using vllm to make fast inference
     python main.py \
         --f_path $DATA_DIR/1_1.json \
         --model_path $MODEL_PATH \
@@ -189,7 +189,7 @@ LexEval 根据 [MIT 许可证](LICENSE) 发行。
 
 ```bibtex
 @misc{li2024lexevalcomprehensivechineselegal,
-      title={LexEval: 用于评估大型语言模型的综合性中文法律基准}, 
+      title={LexEval: A Comprehensive Chinese Legal Benchmark for Evaluating Large Language Models}, 
       author={Haitao Li and You Chen and Qingyao Ai and Yueyue Wu and Ruizhe Zhang and Yiqun Liu},
       year={2024},
       eprint={2409.20288},
@@ -197,3 +197,4 @@ LexEval 根据 [MIT 许可证](LICENSE) 发行。
       primaryClass={cs.CL},
       url={https://arxiv.org/abs/2409.20288}, 
 }
+```

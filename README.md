@@ -73,6 +73,8 @@ The dataset for Lexeval consists of 14,150 questions carefully designed to cover
 The following table shows the details of the tasks in LexEval:
 ![image](./figure/tasks.png)
 
+
+To help researchers quickly understand evaluation data of each task, we provide **Dataset Viewer** at Huggingface Dataset: [🤗 LexEval](https://huggingface.co/datasets/CSHaitao/LexEval).
 Further experimental details and analyses can be found in our paper.
 
 
