@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./figure/logo.jpg" style="width: 30%;height: 30%">
+<img src="./figure/logo.jpg" style="width: 20%;height: 30%">
 <h1> LexEval: A Comprehensive Chinese Legal Benchmark for Evaluating Large Language Models </h1>
 </div>
 
@@ -28,14 +28,13 @@ Welcome to **LexEval**, the comprehensive Chinese legal benchmark designed to ev
 ## What's New
 - **[2024.10]** 🥳 LexEval is accepted by NeurIPs 2024
 
+
 ## Introduction
 
 Large language models (LLMs) have made significant progress in natural language processing tasks and have shown considerable potential in the legal domain.  However, the legal applications often have high requirements on accuracy, reliability and fairness. Applying existing LLMs to legal systems without careful evaluation of their potentials and limitations could lead to significant risks in legal practice.
 Therefore, to facilitate the healthy development and application of LLMs in the legal domain, we propose a comprehensive benchmark LexEval for evaluating LLMs in legal domain. 
 
-Key aspects of LexEval:
-
-**Ability Modeling:** We propose a novel Legal Cognitive Ability Taxonomy (LexAbility Taxonomy) to organize different legal tasks systematically. This taxonomy includes six core abilities: Memorization, Understanding, Logic Inference, Discrimination, Generation, and Ethics.
+**Ability Modeling:** We propose a novel Legal Cognitive Ability Taxonomy (LexCog) to organize different legal tasks systematically. This taxonomy includes six core abilities: Memorization, Understanding, Logic Inference, Discrimination, Generation, and Ethics.
 
 **Scale:** LexEval is currently the largest legal benchmark in China, comprising 23 tasks and 14,150 questions. Additionally, LexEval will be continuously updated to enable more comprehensive evaluations.
 
@@ -52,19 +51,19 @@ Inspired by Bloom's taxonomy and real-world legal application scenarios, we prop
 
 </div>
 
-- **Memorization**: At this level, LLMs are responsible for recalling and accurately retrieving key legal information, such as fundamental statutes, case laws, legal principles, and specialized terminology. This ability ensures that models can store and access foundational knowledge relevant to legal tasks.
+- **Memorization**: The memorization level examines the model’s ability to recall basic legal concepts and rules. Strong memorization skills can lay a solid foundation for more advanced cognitive abilities.
 
-- **Understanding**: LLMs are tested on their ability to comprehend and interpret legal texts and concepts. They must grasp the meaning, implications, and relevance of legal content, demonstrating an ability to accurately understand the issues presented in legal cases, documents, or regulations.
+- **Understanding**: The understanding level assesses large language models’ ability to interpret and explain facts, concepts, and relationships between events, as well as their ability to organize and summarize legal texts.
 
-- **Logic Inference**: This ability evaluates the model’s capacity for legal reasoning and deduction. LLMs are expected to apply logical reasoning to derive conclusions from given legal facts and rules. This includes identifying patterns, drawing inferences, and making connections between legal principles in a structured manner.
+- **Logic Inference**: The logical inference level involves the ability to analyze information and identify its components, relationships, and patterns.
 
-- **Discrimination**: LLMs must exhibit the ability to analyze, compare, and evaluate the significance of legal information based on specific legal criteria. This involves distinguishing between similar legal concepts, analyzing case precedents, and determining the relevance of legal evidence.
+- **Discrimination**: The discrimination level evaluates the model's ability to identify and distinguish complex legal issues and legal facts.
 
-- **Generation**: At this level, LLMs are expected to produce professional and legally sound documents. This includes drafting legal opinions, contracts, case summaries, and other legal texts. The generated content should be precise, well-structured, and adhere to legal standards based on provided instructions or conditions.
+- **Generation**: The discrimination level evaluates the model's ability to identify and distinguish complex legal issues and legal facts.
 
-- **Ethics**: The Ethics level assesses the model's capacity to recognize and address ethical issues in legal contexts. LLMs should be able to analyze legal ethical dilemmas, weigh pros and cons, and make decisions aligned with professional ethics, legal principles, and social values.
+- **Ethics**: The ethics level assesses the model’s ability to recognize and analyze legal ethical issues, make ethical decisions, and weigh pros and cons.
 
-This taxonomy serves as the foundation of LexEval, ensuring that LLMs are evaluated comprehensively across the full spectrum of legal cognitive tasks. By organizing tasks into these six levels, the LexEval benchmark provides a robust framework for assessing how well LLMs can support legal professionals in their work, while also highlighting potential areas for improvement in the models' abilities to handle complex legal scenarios.
+LexCog is not a linear learning process. During training, models can move between different levels and design tasks across these levels for learning. Different legal tasks may involve multiple model ability levels simultaneously, and a model’s performance at one ability level should be evaluated comprehensively based on its performance across various legal tasks. We hope that the introduction of this taxonomy can help researchers better design training objectives and evaluation tasks, thus promoting the development of legal cognitive abilities in large language models.
 
 
 ## Tasks Definition
@@ -141,7 +140,7 @@ The evaluation process mainly consists of two steps: "model result generation" a
     {"input": xxx, "output": xxx, "answer": xxx}
     ```
 
-## Model Result Evaluation
+### Model Result Evaluation
 * Directly run `./evaluation/evaluate.py`.
     ```bash
     cd evaluation
@@ -173,7 +172,7 @@ The evaluation process mainly consists of two steps: "model result generation" a
 
 LexEval is an ongoing project, and we welcome contributions from the community. You can contribute by:
 
-* Adding new tasks to the LexAbility Taxonomy
+* Adding new tasks and insights to the LexAbility Taxonomy
 
 * Submitting new datasets or annotations
 
